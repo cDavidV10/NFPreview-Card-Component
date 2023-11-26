@@ -1,0 +1,169 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--White);
+    font-family: 'Outfit', sans-serif;
+}
+
+:root{
+    --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+    --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%)
+
+}
+
+body{
+    background-color: var(--Very-dark-blue-main-BG);
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 10px;
+    width: 300px;
+    max-width: 350px;
+    height: 80vh;
+    max-height: 85vh;
+    margin: 10vh auto 0;
+    padding: 14px;
+    border-radius: 15px;
+    background-color: var(--Very-dark-blue-card-BG);
+    box-shadow: 
+    5px 5px 10px var(--Very-dark-blue-main-BG),
+    -5px -5px 10px var(--Very-dark-blue-main-BG)
+    ;
+}
+
+.img-cont{
+    position: relative;
+    
+}
+
+
+
+.img-product{
+    border-radius: 10px;
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+
+.wiew{
+    position: absolute;
+    display: grid;
+    place-content: center;
+    background-color: var(--Cyan);
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 300ms ease-in-out;
+}
+
+.wiew-img-cont{
+    display: grid;
+    place-content: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    opacity: 0;
+    transition: all 300ms ease-in-out;
+}
+
+.wiew-img{
+    width: 2rem;
+}
+
+.img-cont:hover .wiew{
+    opacity: .5;
+    cursor: pointer;
+}
+
+.img-cont:hover .wiew-img-cont{
+    opacity: 1;
+    cursor: pointer;
+}
+
+
+.card__title{
+    font-weight: 600;
+    &:hover{
+        color: var(--Cyan);
+        cursor: pointer;
+    }
+}
+
+.card__description{
+    font-size: 1.125rem;
+    color: var(--Soft-blue);
+    font-weight: 400;
+}
+
+.card__info{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.card__info-value,
+.card__info-day{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.card__info-day, b{
+    color: var(--Soft-blue);
+    &:hover{
+        color: var(--Cyan);
+        cursor: pointer;
+    }
+}
+
+.ethereum{
+    color: var(--Cyan);
+}
+
+.card__creator{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 2px;
+    padding-top: 15px;
+    border-top: solid 0.7px var(--Very-dark-blue-line);
+}
+
+.img__cont-creator{
+    width: 15%;
+}
+
+
+
+.img-creator{
+    width: 100%;
+    height: 100%;
+    border: solid 1px;
+    border-radius: 50%;
+}
+
+a{
+    text-decoration: none;
+    &:hover{
+        color: var(--Cyan);
+        cursor: pointer;
+    }
+}
+
+.footer{
+    text-align: center;
+}
+
